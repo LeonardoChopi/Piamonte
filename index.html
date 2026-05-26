@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+    <Header>
+        <div class="logo">
+            <img src="img/logo.jpg" alt="">
+            <h1>PiaMonte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#Productos">Productos</a></li>
+                <li><a href="#Redes">Redes</a></li>
+                <li><a href="https://www.instagram.com/piamonte_/" target="_blank" class="nav-instagram-alt">
+                    <span class="insta-ico" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#E1306C" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="1.5" fill="none"/><circle cx="16.5" cy="8" r="1" fill="#E1306C"/></svg>
+                    </span>
+                    Instagram
+                </a></li>
+            </ul>
+        </nav>
+    </Header>
+    <main>
+        <section class="hero" id="SobreNosotros">
+            <div class="hero-flex">
+                <div class="hero-main">
+                    <h2>Bienvenidos a PiaMonte</h2>
+                    <p>Tu tienda online de pines y broches exclusivos, hechos para destacar tu estilo en cualquier ocasión.</p>
+                    <a href="#" class="btn">Explorar Productos</a>
+                </div>
+                <div class="how-to-buy">
+                    <strong>¿Cómo comprar?</strong><br><br>
+                    • Elegí el modelo que más te guste del catálogo.<br>
+                    • Sacale captura y envíanosla por mensaje.<br>
+                    • Podés pagar mediante transferencia o efectivo.<br>
+                    • Realizamos envíos por DAC a todo el país.<br><br>
+                    📍 Si sos de Mercedes, Soriano, coordinamos punto de encuentro para la entrega.
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="Productos">
+            <h2>Nuestros Productos</h2>
+            <div class="product-list">
+                <!-- Los productos se cargarán dinámicamente aquí -->
+            </div>
+        </section>
+
+        <footer id="Redes">
+            <div class="footer-content">
+                <h2>Redes Sociales</h2>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/piamonte_/" target="_blank" class="footer-ig">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><rect width="24" height="24" rx="7" fill="#E1306C"/><path d="M12 8.4A3.6 3.6 0 1 0 12 15.6A3.6 3.6 0 1 0 12 8.4Z" stroke="#fff" stroke-width="1.5"/><circle cx="16.8" cy="7.2" r="0.9" fill="#fff"/></svg>
+                        Instagram
+                    </a>
+                </div>
+                <div class="footer-copy">&copy; 2026 PiaMonte. Todos los derechos reservados.</div>
+            </div>
+        </footer>
+</body>
+<script src="productos/productos.js"></script>
+<script src="lightbox.js"></script>
+</html>
