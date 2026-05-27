@@ -5,18 +5,22 @@ const productos = [
     descripcion: "Broche elegante con forma de cangrejo, decorado con piedras turquesa.",
     imagenes: [
       "productos/img/BorcheCangrejo1.jpg",
-      "productos/img/BorcheCangrejo2.jpg"
+      "productos/img/BorcheCangrejo2.jpg",
+      "productos/img/BorcheCangrejo3.jpg",
+      "productos/img/BorcheCangrejo4.jpg"
     ],
-    stock: true
+    stock: true,
+    precio: 350
   },
   {
-    nombre: "Broche Salamandra",
-    descripcion: "Broche de salamandra con incrustaciones de piedras de colores.",
+    nombre: "Broche Lagartija",
+    descripcion: "Broche de lagartija con incrustaciones de piedras de colores.",
     imagenes: [
       "productos/img/BorcheLagarto1.jpg",
       "productos/img/BorcheLagarto2.jpg"
     ],
-    stock: false
+    stock: false,
+    precio: 400
   },
   {
     nombre: "Broche Abeja",
@@ -25,8 +29,226 @@ const productos = [
       "productos/img/BrocheAbeja1.jpg",
       "productos/img/BrocheAbeja2.jpg"
     ],
-    stock: true
+    stock: false,
+    precio: 350
+  },
+  {
+    nombre: "Caballo Plateado",
+    descripcion: "Caballo plateado, perfecto para ocasiones especiales.",
+    imagenes: [
+      "productos/img/CaballoPlateado1.jpeg",
+      "productos/img/CaballoPlateado2.jpeg"
+    ],
+    stock: true,
+    precio: 250
+  },
+  {
+    nombre: "Libélula",
+    descripcion: "Libélula decorativa, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/Libélula1.jpeg"
+    ],
+    stock: true,
+    precio: 350
+  },
+  {
+    nombre: "Bandera Uruguay",
+    descripcion: "Bandera de Uruguay, perfecta para ocasiones especiales.",
+    imagenes: [
+      "productos/img/BanderaUruguay1.jpeg",
+      "productos/img/BanderaUruguay2.jpeg"
+    ],
+    stock: true,
+    precio: 180
+  },
+  {
+    nombre: "Corona",
+    descripcion: "Corona decorativa, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Corona1.jpeg"
+    ],
+    stock: true,
+    precio: 280
+  },
+  {
+    nombre: "Búho",
+    descripcion: "Búho decorativo, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Buho1.jpeg"
+    ],
+    stock: true,
+    precio: 280
+  },
+  {
+    nombre: "Pack flor + copo de nieve",
+    descripcion: "Pack con flores y copo de nieve, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Florycopo1.jpeg"
+    ],
+    stock: true,
+    precio: 320
+  },
+  {
+    nombre: "Palmera",
+    descripcion: "Palmera decorativa, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Palmera1.jpeg"
+    ],
+    stock: true,
+    precio: 250
+  },
+  {
+    nombre: "Pack de minis",
+    descripcion: "Pack con miniaturas, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Minis1.jpeg",
+      "productos/img/Minis2.jpeg",
+      "productos/img/Minis3.jpeg",
+      "productos/img/Minis4.jpeg",
+      "productos/img/Minis5.jpeg",
+      "productos/img/Minis6.jpeg",
+      "productos/img/Minis7.jpeg",
+      "productos/img/Minis8.jpeg"
+    ],
+    stock: true,
+    precio: 100
+  },
+  {
+    nombre: "Corbatín con sujetador",
+    descripcion: "Corbatín con sujetador, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Corbatín1.jpeg"
+    ],
+    stock: true,
+    precio: 290
+  },
+  {
+    nombre: "Gato unitario",
+    descripcion: "Gato unitario, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Gato1.jpeg"
+    ],
+    stock: true,
+    precio: 120
+  },
+  {
+    nombre: "Mariquita verde",
+    descripcion: "Mariquita verde, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVerde1.jpeg"
+    ],
+    stock: true,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita marrón",
+    descripcion: "Mariquita marrón, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaMarron1.jpeg"
+    ],
+    stock: true,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita rosada",
+    descripcion: "Mariquita rosada, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaRosada1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita turquesa",
+    descripcion: "Mariquita turquesa, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaTurquesa1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita colores",
+    descripcion: "Mariquita colores, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaColores1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita violeta",
+    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVioleta1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Caballito de mar",
+    descripcion: "Caballito de mar, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/CaballitoDeMar1.jpeg"
+    ],
+    stock: false,
+    precio: false
+  },
+  {
+    nombre: "Estrella de mar + caracol",
+    descripcion: "Estrella de mar + caracol, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/EstrellaDeMarYCaracol1.jpeg"
+    ],
+    stock: false,
+    precio: false
+  },
+  {
+    nombre: "Combo flores",
+    descripcion: "Combo flores, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/Comboflores1.jpeg"
+    ],
+    stock: false,
+    precio: false
+  },
+  {
+    nombre: "Mariquita violeta",
+    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVioleta1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita violeta",
+    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVioleta1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita violeta",
+    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVioleta1.jpeg"
+    ],
+    stock: false,
+    precio: 260
+  },
+  {
+    nombre: "Mariquita violeta",
+    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
+    imagenes: [
+      "productos/img/MariquitaVioleta1.jpeg"
+    ],
+    stock: false,
+    precio: 260
   }
+
 ];
 
 // Renderizado dinámico de productos
@@ -59,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ${galeria}
       <h3>${producto.nombre}</h3>
       <p>${producto.descripcion}</p>
+      <div class="product-price"><strong>Precio:</strong> $${producto.precio}</div>
       ${stockHtml}
       <div class="product-thumbs">
         ${(producto.imagenes && producto.imagenes.length > 0)
