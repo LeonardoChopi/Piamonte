@@ -6,8 +6,8 @@ const productos = [
     imagenes: [
       "productos/img/BorcheCangrejo1.jpg",
       "productos/img/BorcheCangrejo2.jpg",
-      "productos/img/BorcheCangrejo3.jpg",
-      "productos/img/BorcheCangrejo4.jpg"
+      "productos/img/BorcheCangrejo3.jpeg",
+      "productos/img/BorcheCangrejo4.jpeg"
     ],
     stock: true,
     precio: 350
@@ -53,13 +53,14 @@ const productos = [
   },
   {
     nombre: "Bandera Uruguay",
-    descripcion: "Bandera de Uruguay, perfecta para ocasiones especiales.",
+    // descripcion eliminada
     imagenes: [
       "productos/img/BanderaUruguay1.jpeg",
       "productos/img/BanderaUruguay2.jpeg"
     ],
     stock: true,
-    precio: 180
+    precio: 200,
+    descuento: 10
   },
   {
     nombre: "Corona",
@@ -211,44 +212,7 @@ const productos = [
     ],
     stock: false,
     precio: false
-  },
-  {
-    nombre: "Mariquita violeta",
-    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
-    imagenes: [
-      "productos/img/MariquitaVioleta1.jpeg"
-    ],
-    stock: false,
-    precio: 260
-  },
-  {
-    nombre: "Mariquita violeta",
-    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
-    imagenes: [
-      "productos/img/MariquitaVioleta1.jpeg"
-    ],
-    stock: false,
-    precio: 260
-  },
-  {
-    nombre: "Mariquita violeta",
-    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
-    imagenes: [
-      "productos/img/MariquitaVioleta1.jpeg"
-    ],
-    stock: false,
-    precio: 260
-  },
-  {
-    nombre: "Mariquita violeta",
-    descripcion: "Mariquita violeta, ideal para ocasiones especiales.",
-    imagenes: [
-      "productos/img/MariquitaVioleta1.jpeg"
-    ],
-    stock: false,
-    precio: 260
   }
-
 ];
 
 // Renderizado dinámico de productos
@@ -277,21 +241,35 @@ document.addEventListener("DOMContentLoaded", () => {
       ? '<span class="stock stock-true">En stock</span>'
       : '<span class="stock stock-false">Sin stock</span>';
 
-    item.innerHTML = `
-      ${galeria}
-      <h3>${producto.nombre}</h3>
-      <p>${producto.descripcion}</p>
-      <div class="product-price"><strong>Precio:</strong> $${producto.precio}</div>
-      ${stockHtml}
-      <div class="product-thumbs">
-        ${(producto.imagenes && producto.imagenes.length > 0)
-          ? producto.imagenes.map((img, i) =>
-              `<img src="${img}" alt="${producto.nombre} miniatura" class="thumb" data-idx="${idx}" data-img="${i}" onerror="this.onerror=null;this.src='img/default.jpg';">`
-            ).join("")
-          : `<img src="img/default.jpg" alt="${producto.nombre} miniatura" class="thumb" data-idx="${idx}" data-img="0">`
-        }
-      </div>
-    `;
+    let precioHtml = "";
+    if (producto.precio !== false && producto.precio !== undefined) {
+      if (producto.descuento) {
+        const precioFinal = Math.round(producto.precio * (1 - producto.descuento / 100));
+        precioHtml = '<div class="product-price">' +
+          '<span class="precio-original">$' + producto.precio + '</span>' +
+          '<span class="precio-final">$' + precioFinal + '</span>' +
+          '<span class="precio-off">' + producto.descuento + '% OFF</span>' +
+          '</div>';
+      } else {
+        precioHtml = '<div class="product-price"><strong>$' + producto.precio + '</strong></div>';
+      }
+    } else {
+      precioHtml = "";
+    }
+
+    item.innerHTML =
+      galeria +
+      '<h3>' + producto.nombre + '</h3>' +
+      precioHtml +
+      stockHtml +
+      '<div class="product-thumbs">' +
+        ((producto.imagenes && producto.imagenes.length > 0)
+          ? producto.imagenes.map(function(img, i) {
+              return '<img src="' + img + '" alt="' + producto.nombre + ' miniatura" class="thumb" data-idx="' + idx + '" data-img="' + i + '" onerror="this.onerror=null;this.src=\'img/default.jpg\';">';
+            }).join("")
+          : '<img src="img/default.jpg" alt="' + producto.nombre + ' miniatura" class="thumb" data-idx="' + idx + '" data-img="0">'
+        ) +
+      '</div>';
     lista.appendChild(item);
   });
 
