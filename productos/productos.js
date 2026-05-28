@@ -118,7 +118,9 @@ const productos = [
     nombre: "Corbatín con sujetador",
     descripcion: "Corbatín con sujetador, ideal para ocasiones especiales.",
     imagenes: [
-      "productos/img/Corbatín1.jpeg"
+      "productos/img/Corbatín1.jpeg",
+      "productos/img/Corbatín2.jpeg",
+      "productos/img/Corbatín3.jpeg"
     ],
     stock: true,
     precio: 290
