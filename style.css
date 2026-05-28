@@ -22,10 +22,22 @@ header {
     background: #f6ede4;
     padding: 22px 40px;
     box-shadow: 0 2px 16px rgba(90, 70, 50, 0.08);
+
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
+
     flex-wrap: wrap;
+
+    transition:
+        transform 0.35s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ocultar header */
+.header-hide {
+    transform: translateY(-110%);
 }
 
 header .logo {
@@ -438,6 +450,87 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* ── Menú hamburguesa ── */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: #f6ede4;
+    border: 2px solid #a67c52;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    z-index: 20;
+    transition: background 0.2s, border 0.2s;
+}
+.menu-toggle .bar {
+    width: 26px;
+    height: 4px;
+    background: #a67c52;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.4,2,.6,1);
+}
+.menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav {
+        position: relative;
+    }
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #f6ede4;
+        box-shadow: 0 8px 32px rgba(166,124,82,0.13);
+        border-radius: 18px;
+        padding: 18px 0 12px 0;
+        min-width: 180px;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 15;
+        display: none;
+        transition: all 0.25s cubic-bezier(.4,2,.6,1);
+    }
+    nav ul.menu-open {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    nav li {
+        width: 100%;
+        margin: 0;
+    }
+    nav a {
+        width: 100%;
+        padding: 14px 22px;
+        border-radius: 0;
+        border-bottom: 1px solid #e2d3c0;
+        justify-content: flex-start;
+        font-size: 1.08rem;
+    }
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
+
 .product-gallery img.active:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 28px rgba(166, 124, 82, 0.18);
@@ -530,26 +623,41 @@ main {
         flex-direction: column;
         align-items: flex-start;
         padding: 18px 10px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
+
+    body {
+        padding-top: 110px;
+    }
+
     nav ul {
         gap: 12px;
         justify-content: flex-start;
     }
+
     .hero-flex {
         flex-direction: column;
         gap: 0;
     }
+
     .how-to-buy {
         margin-top: 32px;
         max-width: 100%;
     }
+
     .hero-main {
         max-width: 100%;
         text-align: center;
     }
+
     .hero-main h2 {
         font-size: 2.2rem;
     }
+
     .product-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
