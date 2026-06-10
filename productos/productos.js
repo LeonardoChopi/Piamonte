@@ -43,10 +43,56 @@ const productos = [
     precio: 250
   },
   {
-    nombre: "Libélula",
-    descripcion: "Libélula decorativa, ideal para coleccionistas.",
+    nombre: "Prendedor sinapsis",
+    descripcion: "Prendedor con forma de sinapsis, ideal para coleccionistas.",
     imagenes: [
-      "productos/img/Libélula1.jpeg"
+      "productos/img/PrendedorSinapsis1.jpeg"
+    ],
+    stock: true,
+    precio: 280
+  },
+  {
+    nombre: "Prendedor estetoscopio",
+    descripcion: "Prendedor con forma de estetoscopio, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/PrendedorEstetoscopio1.jpeg",
+      "productos/img/PrendedorEstetoscopio2.jpeg"
+    ],
+    stock: true,
+    precio: 280
+  },
+  {
+    nombre: "Prendedor dentista",
+    descripcion: "Prendedor con forma de dentista, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/PrendedorDentista1.jpeg"
+    ],
+    stock: true,
+    precio: 280
+  },
+  {
+    nombre: "Prendedor enfermería ",
+    descripcion: "Prendedor con forma de enfermería, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/PrendedorEnfermeria1.jpeg"
+    ],
+    stock: true,
+    precio: 350
+  },
+  {
+    nombre: "Prendedor psicología ",
+    descripcion: "Prendedor con forma de psicología, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/PrendedorPsicologia1.jpeg"
+    ],
+    stock: true,
+    precio: 350
+  },
+  {
+    nombre: "Prendedor Derecho",
+    descripcion: "Prendedor con forma de derecho, ideal para coleccionistas.",
+    imagenes: [
+      "productos/img/PrendedorDerecho1.jpeg"
     ],
     stock: true,
     precio: 350
