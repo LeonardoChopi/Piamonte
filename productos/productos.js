@@ -29,8 +29,8 @@ const productos = [
       "productos/img/BrocheAbeja1.jpg",
       "productos/img/BrocheAbeja2.jpg"
     ],
-    stock: false,
-    precio: 350
+    stock: true,
+    precio: 300
   },
   {
     nombre: "Caballo Plateado",
