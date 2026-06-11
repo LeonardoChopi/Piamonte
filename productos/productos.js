@@ -77,7 +77,7 @@ const productos = [
       "productos/img/PrendedorEnfermeria1.jpeg"
     ],
     stock: true,
-    precio: 350
+    precio: 280
   },
   {
     nombre: "Prendedor psicología ",
@@ -86,7 +86,7 @@ const productos = [
       "productos/img/PrendedorPsicologia1.jpeg"
     ],
     stock: true,
-    precio: 350
+    precio: 280
   },
   {
     nombre: "Prendedor Derecho",
@@ -95,7 +95,7 @@ const productos = [
       "productos/img/PrendedorDerecho1.jpeg"
     ],
     stock: true,
-    precio: 350
+    precio: 280
   },
   {
     nombre: "Bandera Uruguay",
